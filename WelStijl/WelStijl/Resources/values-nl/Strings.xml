@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="ApplicationName">WelStijl</string>
-  <string name="FragmentSearch">Search</string>
+  <string name="FragmentSearch">Zoek</string>
   <string name="FragmentMatch">Match</string>
-  <string name="FragmentDesign">Design</string>
-  <string name="FragmentMyClothes">My Clothes</string>
+  <string name="FragmentDesign">Ontwerp</string>
+  <string name="FragmentMyClothes">Mijn Kleding</string>
 </resources>

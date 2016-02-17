@@ -61,7 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestFragment.cs" />
+    <Compile Include="MatchFragment.cs" />
+    <Compile Include="DesignFragment.cs" />
+    <Compile Include="MyClothesFragment.cs" />
+    <Compile Include="SearchFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,12 +73,15 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Fragment_Design.axml" />
+    <AndroidResource Include="Resources\layout\Fragment_Match.axml" />
+    <AndroidResource Include="Resources\layout\Fragment_MyClothes.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values-nl\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />
@@ -109,7 +115,10 @@
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Fragment.axml" />
+    <AndroidResource Include="Resources\layout\Fragment_Search.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

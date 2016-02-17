@@ -2206,46 +2206,55 @@ namespace WelStijl
 			public const int design_navigation_menu = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int Fragment = 2130903073;
+			public const int Fragment_Design = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int Main = 2130903074;
+			public const int Fragment_Match = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_media_action = 2130903075;
+			public const int Fragment_MyClothes = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_media_cancel_action = 2130903076;
+			public const int Fragment_Search = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_big_media = 2130903077;
+			public const int Main = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_big_media_narrow = 2130903078;
+			public const int notification_media_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_lines = 2130903079;
+			public const int notification_media_cancel_action = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_media = 2130903080;
+			public const int notification_template_big_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_part_chronometer = 2130903081;
+			public const int notification_template_big_media_narrow = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_part_time = 2130903082;
+			public const int notification_template_lines = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int select_dialog_item_material = 2130903083;
+			public const int notification_template_media = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int select_dialog_multichoice_material = 2130903084;
+			public const int notification_template_part_chronometer = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int select_dialog_singlechoice_material = 2130903085;
+			public const int notification_template_part_time = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int support_simple_spinner_dropdown_item = 2130903086;
+			public const int select_dialog_item_material = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int select_dialog_multichoice_material = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int select_dialog_singlechoice_material = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int support_simple_spinner_dropdown_item = 2130903089;
 			
 			static Layout()
 			{
@@ -2260,11 +2269,20 @@ namespace WelStijl
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050014
-			public const int ApplicationName = 2131034132;
-			
 			// aapt resource value: 0x7f050013
-			public const int Hello = 2131034131;
+			public const int ApplicationName = 2131034131;
+			
+			// aapt resource value: 0x7f050016
+			public const int FragmentDesign = 2131034134;
+			
+			// aapt resource value: 0x7f050015
+			public const int FragmentMatch = 2131034133;
+			
+			// aapt resource value: 0x7f050017
+			public const int FragmentMyClothes = 2131034135;
+			
+			// aapt resource value: 0x7f050014
+			public const int FragmentSearch = 2131034132;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;

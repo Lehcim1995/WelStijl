@@ -40,10 +40,10 @@ namespace WelStijl
         private void SetupViewPager()
         {
             adapter = new ViewPagerAdapter(SupportFragmentManager);
-            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(TestFragment)).Name), "Zoek");
-            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(TestFragment)).Name), "Match");
-            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(TestFragment)).Name), "Ontwerp");
-            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(TestFragment)).Name), "Mijn Kleding");
+            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(SearchFragment)).Name), Resources.GetString(Resource.String.FragmentSearch));
+            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(MatchFragment)).Name), Resources.GetString(Resource.String.FragmentMatch));
+            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(DesignFragment)).Name), Resources.GetString(Resource.String.FragmentDesign));
+            adapter.AddFragment(Fragment.Instantiate(this, Class.FromType(typeof(MyClothesFragment)).Name), Resources.GetString(Resource.String.FragmentMyClothes));
             viewPager.Adapter = adapter;
         }
 
