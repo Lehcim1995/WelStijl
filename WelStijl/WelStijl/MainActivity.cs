@@ -11,6 +11,8 @@ namespace WelStijl
     [Activity(Label = "WelStijl", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        private Button btnBla;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -20,4 +22,4 @@ namespace WelStijl
         }
     }
 }
-
+    
