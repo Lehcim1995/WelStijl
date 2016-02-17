@@ -101,16 +101,16 @@ namespace WelStijl
 		{
 			
 			// aapt resource value: 0x7f070002
-			public const int button1 = 2131165186;
-			
-			// aapt resource value: 0x7f070003
-			public const int button2 = 2131165187;
+			public const int btnLogin = 2131165186;
 			
 			// aapt resource value: 0x7f070001
-			public const int editText1 = 2131165185;
+			public const int pwdPassword = 2131165185;
+			
+			// aapt resource value: 0x7f070003
+			public const int tvwMessage = 2131165187;
 			
 			// aapt resource value: 0x7f070000
-			public const int editText2 = 2131165184;
+			public const int tvwUserName = 2131165184;
 			
 			static Id()
 			{

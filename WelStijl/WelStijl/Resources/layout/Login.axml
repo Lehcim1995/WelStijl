@@ -8,24 +8,27 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/tvwUserName"
         android:hint="Gebruikersnaam"
         android:password="false" />
     <EditText
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/pwdPassword"
         android:hint="Wachtwoord"
         android:typeface="normal" />
     <Button
         android:text="Log in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
-    <Button
-        android:text="Registreer"
+        android:id="@+id/btnLogin" />
+    <TextView
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@+id/tvwMessage"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
 </LinearLayout>
