@@ -41,6 +41,46 @@ namespace WelStijl
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040003
+			public const int colorAccent = 2130968579;
+			
+			// aapt resource value: 0x7f040008
+			public const int colorActionBarTitle = 2130968584;
+			
+			// aapt resource value: 0x7f040007
+			public const int colorDivider = 2130968583;
+			
+			// aapt resource value: 0x7f040006
+			public const int colorIcons = 2130968582;
+			
+			// aapt resource value: 0x7f040000
+			public const int colorPrimary = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int colorPrimaryDark = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int colorPrimaryLight = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int colorPrimaryText = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int colorSecondaryText = 2130968581;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
@@ -76,11 +116,11 @@ namespace WelStijl
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
 			static String()
 			{
@@ -95,8 +135,14 @@ namespace WelStijl
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int AppTheme = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int AppTheme = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int AppTheme_ActionBar = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int AppTheme_ActionBar_Title = 2131099650;
 			
 			static Style()
 			{

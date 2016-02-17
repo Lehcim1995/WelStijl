@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace WelStijl
 {
-    [Activity(Label = "WelStijl", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme")]
+    [Activity(Label = "WelStijl", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
