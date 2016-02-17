@@ -65,6 +65,7 @@
     <Compile Include="DesignFragment.cs" />
     <Compile Include="MyClothesFragment.cs" />
     <Compile Include="SearchFragment.cs" />
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +77,9 @@
     <AndroidResource Include="Resources\layout\Fragment_Design.axml" />
     <AndroidResource Include="Resources\layout\Fragment_Match.axml" />
     <AndroidResource Include="Resources\layout\Fragment_MyClothes.axml" />
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

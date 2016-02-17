@@ -5,10 +5,11 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
-using Android.Support.V7.Widget;
+using Android.Widget;
 using Java.Lang;
 using Fragment = Android.Support.V4.App.Fragment;
 using FragmentManager = Android.Support.V4.App.FragmentManager;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace WelStijl
 {
@@ -47,6 +48,7 @@ namespace WelStijl
             viewPager.Adapter = adapter;
         }
 
+
         class ViewPagerAdapter : FragmentPagerAdapter
         {
             private readonly List<Fragment> fragments = new List<Fragment>();
@@ -75,6 +77,5 @@ namespace WelStijl
                 return new String(fragmentTitles[position]);
             }
         }
-        
     }
 }
