@@ -24,6 +24,8 @@ namespace WelStijl
     public class MyClothesFragment : Fragment
     {
         static readonly int REQUEST_CAMERA = 0;
+        static readonly int WRITE_STORAGE = 1;
+        static readonly int READ_STORAGE = 2;
         private ImageView _imageView;
         private View rootView;
 
@@ -66,8 +68,54 @@ namespace WelStijl
             }
         }
 
+        void RequestWritePermission()
+        {
+            //Log.Info(TAG, "CAMERA permission has NOT been granted. Requesting permission.");
+
+            if (ActivityCompat.ShouldShowRequestPermissionRationale(Activity, Manifest.Permission.WriteExternalStorage))
+            {
+                // Provide an additional rationale to the user if the permission was not granted
+                // and the user would benefit from additional context for the use of the permission.
+                // For example if the user has previously denied the permission.
+                //Log.Info(TAG, "Displaying camera permission rationale to provide additional context.");
+
+                Snackbar.Make(rootView, Resource.String.permission_write,
+                    Snackbar.LengthIndefinite).SetAction(Resource.String.ok, new Action<View>(delegate (View obj) {
+                        ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.WriteExternalStorage }, REQUEST_CAMERA);
+                    })).Show();
+            }
+            else {
+                // Camera permission has not been granted yet. Request it directly.
+                ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.WriteExternalStorage }, REQUEST_CAMERA);
+            }
+        }
+
+        void RequestReadPermission()
+        {
+            //Log.Info(TAG, "CAMERA permission has NOT been granted. Requesting permission.");
+
+            if (ActivityCompat.ShouldShowRequestPermissionRationale(Activity, Manifest.Permission.ReadExternalStorage))
+            {
+                // Provide an additional rationale to the user if the permission was not granted
+                // and the user would benefit from additional context for the use of the permission.
+                // For example if the user has previously denied the permission.
+                //Log.Info(TAG, "Displaying camera permission rationale to provide additional context.");
+
+                Snackbar.Make(rootView, Resource.String.permission_read,
+                    Snackbar.LengthIndefinite).SetAction(Resource.String.ok, new Action<View>(delegate (View obj) {
+                        ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.ReadExternalStorage }, REQUEST_CAMERA);
+                    })).Show();
+            }
+            else {
+                // Camera permission has not been granted yet. Request it directly.
+                ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.ReadExternalStorage }, REQUEST_CAMERA);
+            }
+        }
+
         private void CreateDirectoryForPictures()
         {
+            RequestWritePermission();
+            RequestReadPermission();
             App._dir = new File(
                 Environment.GetExternalStoragePublicDirectory(
                     Environment.DirectoryPictures), "CameraAppDemo");

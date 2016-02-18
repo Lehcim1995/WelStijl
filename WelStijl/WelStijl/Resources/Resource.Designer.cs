@@ -2596,6 +2596,12 @@ namespace WelStijl
 			// aapt resource value: 0x7f090020
 			public const int permission_camera_rationale = 2131296288;
 			
+			// aapt resource value: 0x7f090022
+			public const int permission_read = 2131296290;
+			
+			// aapt resource value: 0x7f090023
+			public const int permission_write = 2131296291;
+			
 			// aapt resource value: 0x7f09001f
 			public const int permissions_not_granted = 2131296287;
 			
