@@ -20,9 +20,11 @@ namespace WelStijl
 
             Clothing item = clothing[position];
 
+            vh.Clothing = item;
+
             vh.ImageView.SetImageResource(item.Image);
             vh.NameView.Text = item.Name;
-            vh.PriceView.Text = (item.Price / 100m).ToString("C2");
+            vh.PriceView.Text = item.FormattedPrice;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

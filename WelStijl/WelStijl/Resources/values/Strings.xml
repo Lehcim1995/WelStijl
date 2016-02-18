@@ -5,4 +5,6 @@
   <string name="FragmentMatch">Match</string>
   <string name="FragmentDesign">Design</string>
   <string name="FragmentMyClothes">My Clothes</string>
+  <string name="Male">Male</string>
+  <string name="Female">Female</string>
 </resources>

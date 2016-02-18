@@ -72,6 +72,7 @@
     <Compile Include="Clothing.cs" />
     <Compile Include="ClothingAdapter.cs" />
     <Compile Include="ClothingViewHolder.cs" />
+    <Compile Include="ClothingDetailActivity.cs" />
     <Compile Include="MatchFragment.cs" />
     <Compile Include="DesignFragment.cs" />
     <Compile Include="MyClothesFragment.cs" />
@@ -94,6 +95,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout-sw480dp\Main.axml" />
     <AndroidResource Include="Resources\layout\ClothingCardView.axml" />
+    <AndroidResource Include="Resources\layout\ClothingDetail.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -146,7 +148,22 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_add_shopping_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\mipmap-hdpi\" />
+    <Folder Include="Resources\mipmap-xhdpi\" />
+    <Folder Include="Resources\mipmap-xxhdpi\" />
+    <Folder Include="Resources\mipmap-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
