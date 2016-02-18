@@ -64,6 +64,7 @@
     <Compile Include="MatchFragment.cs" />
     <Compile Include="DesignFragment.cs" />
     <Compile Include="MyClothesFragment.cs" />
+    <Compile Include="RectangleShape.cs" />
     <Compile Include="SearchFragment.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />

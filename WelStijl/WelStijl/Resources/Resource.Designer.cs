@@ -1708,8 +1708,8 @@ namespace WelStijl
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b006d
-			public const int action0 = 2131427437;
+			// aapt resource value: 0x7f0b006e
+			public const int action0 = 2131427438;
 			
 			// aapt resource value: 0x7f0b0055
 			public const int action_bar = 2131427413;
@@ -1735,8 +1735,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0056
 			public const int action_context_bar = 2131427414;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int action_divider = 2131427441;
+			// aapt resource value: 0x7f0b0072
+			public const int action_divider = 2131427442;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -1768,14 +1768,14 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0028
 			public const int bottom = 2131427368;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int btnLogin = 2131427432;
+			// aapt resource value: 0x7f0b0069
+			public const int btnLogin = 2131427433;
 			
 			// aapt resource value: 0x7f0b004b
 			public const int buttonPanel = 2131427403;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int cancel_action = 2131427438;
+			// aapt resource value: 0x7f0b006f
+			public const int cancel_action = 2131427439;
 			
 			// aapt resource value: 0x7f0b0029
 			public const int center = 2131427369;
@@ -1789,8 +1789,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b004d
 			public const int checkbox = 2131427405;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int chronometer = 2131427444;
+			// aapt resource value: 0x7f0b0075
+			public const int chronometer = 2131427445;
 			
 			// aapt resource value: 0x7f0b0031
 			public const int clip_horizontal = 2131427377;
@@ -1825,8 +1825,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b001a
 			public const int end = 2131427354;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int end_padder = 2131427449;
+			// aapt resource value: 0x7f0b007a
+			public const int end_padder = 2131427450;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int enterAlways = 2131427362;
@@ -1870,17 +1870,17 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b003d
 			public const int image = 2131427389;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int info = 2131427448;
+			// aapt resource value: 0x7f0b0079
+			public const int info = 2131427449;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int left = 2131427373;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int line1 = 2131427442;
+			// aapt resource value: 0x7f0b0073
+			public const int line1 = 2131427443;
 			
-			// aapt resource value: 0x7f0b0076
-			public const int line3 = 2131427446;
+			// aapt resource value: 0x7f0b0077
+			public const int line3 = 2131427447;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int listMode = 2131427338;
@@ -1888,8 +1888,11 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b003f
 			public const int list_item = 2131427391;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int media_actions = 2131427440;
+			// aapt resource value: 0x7f0b0066
+			public const int lloMatch = 2131427430;
+			
+			// aapt resource value: 0x7f0b0071
+			public const int media_actions = 2131427441;
 			
 			// aapt resource value: 0x7f0b001b
 			public const int middle = 2131427355;
@@ -1924,8 +1927,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0006
 			public const int progress_horizontal = 2131427334;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int pwdPassword = 2131427431;
+			// aapt resource value: 0x7f0b0068
+			public const int pwdPassword = 2131427432;
 			
 			// aapt resource value: 0x7f0b004f
 			public const int radio = 2131427407;
@@ -2011,8 +2014,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b002f
 			public const int start = 2131427375;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int status_bar_latest_event_content = 2131427439;
+			// aapt resource value: 0x7f0b0070
+			public const int status_bar_latest_event_content = 2131427440;
 			
 			// aapt resource value: 0x7f0b0060
 			public const int submit_area = 2131427424;
@@ -2020,20 +2023,20 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b000c
 			public const int tabMode = 2131427340;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int tabs = 2131427435;
+			// aapt resource value: 0x7f0b006c
+			public const int tabs = 2131427436;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int text = 2131427447;
+			// aapt resource value: 0x7f0b0078
+			public const int text = 2131427448;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int text2 = 2131427445;
+			// aapt resource value: 0x7f0b0076
+			public const int text2 = 2131427446;
 			
 			// aapt resource value: 0x7f0b0048
 			public const int textSpacerNoButtons = 2131427400;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int time = 2131427443;
+			// aapt resource value: 0x7f0b0074
+			public const int time = 2131427444;
 			
 			// aapt resource value: 0x7f0b0041
 			public const int title = 2131427393;
@@ -2041,8 +2044,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0044
 			public const int title_template = 2131427396;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int toolbar = 2131427434;
+			// aapt resource value: 0x7f0b006b
+			public const int toolbar = 2131427435;
 			
 			// aapt resource value: 0x7f0b0030
 			public const int top = 2131427376;
@@ -2050,11 +2053,11 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0043
 			public const int topPanel = 2131427395;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int tvwMessage = 2131427433;
+			// aapt resource value: 0x7f0b006a
+			public const int tvwMessage = 2131427434;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int tvwUserName = 2131427430;
+			// aapt resource value: 0x7f0b0067
+			public const int tvwUserName = 2131427431;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int up = 2131427336;
@@ -2065,8 +2068,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f0b0009
 			public const int view_offset_helper = 2131427337;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int viewpager = 2131427436;
+			// aapt resource value: 0x7f0b006d
+			public const int viewpager = 2131427437;
 			
 			// aapt resource value: 0x7f0b0020
 			public const int withText = 2131427360;
