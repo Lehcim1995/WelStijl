@@ -137,7 +137,7 @@ namespace WelStijl
         {
             if ((int)Build.VERSION.SdkInt >= 23)
             {
-                Toast.MakeText(Activity, "Je mobiel is kut", ToastLength.Short).Show();
+                //Toast.MakeText(Activity, "Je mobiel is kut", ToastLength.Short).Show();
                 if (ContextCompat.CheckSelfPermission(Context, Manifest.Permission.Camera) != (int)Permission.Granted)
                 {
 
