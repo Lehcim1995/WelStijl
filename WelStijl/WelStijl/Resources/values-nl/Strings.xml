@@ -5,4 +5,5 @@
   <string name="FragmentMatch">Match</string>
   <string name="FragmentDesign">Ontwerp</string>
   <string name="FragmentMyClothes">Mijn Kleding</string>
+  <string name="openCamera">Open Camera</string>
 </resources>
