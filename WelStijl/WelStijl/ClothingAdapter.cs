@@ -8,10 +8,10 @@ namespace WelStijl
     {
         readonly List<Clothing> clothing = new List<Clothing>(new []
         {
-            new Clothing(Resource.Drawable.Icon, "Icon", 500),
-            new Clothing(Resource.Drawable.Icon, "Other Icon", 495),
-            new Clothing(Resource.Drawable.Icon, "Same Other Icon", 490),
-            new Clothing(Resource.Drawable.Icon, "More Same Other Icon", 495)
+            new Clothing(Resource.Drawable.Icon, "Icon", 500, "green", "M", 0),
+            new Clothing(Resource.Drawable.Icon, "Other Icon", 495, "green", "L", 1),
+            new Clothing(Resource.Drawable.Icon, "Same Other Icon", 490, "green", "L", 0),
+            new Clothing(Resource.Drawable.Icon, "More Same Other Icon", 495, "green", "M", 1)
         }); 
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
