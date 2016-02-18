@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Android.Net;
 using Android.Support.V7.Widget;
 using Android.Views;
 
@@ -6,12 +7,9 @@ namespace WelStijl
 {
     class ClothingAdapter : RecyclerView.Adapter
     {
-        readonly List<Clothing> clothing = new List<Clothing>(new []
+        static readonly List<Clothing> clothing = new List<Clothing>(new []
         {
-            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Icon", 500, "green", "M", 0),
-            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Other Icon", 495, "green", "L", 1),
-            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Same Other Icon", 490, "green", "L", 0),
-            new Clothing(Resource.Drawable.ic_notification_sync_problem, "More Same Other Icon", 495, "green", "M", 1)
+            new Clothing("file:///android_asset/j-2-jas-zwart-wit.jpg", "Jas Zwart Wit", 2695, "zwart", "56, 62, 68, 74", 0), 
         }); 
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
@@ -22,7 +20,7 @@ namespace WelStijl
 
             vh.Clothing = item;
 
-            vh.ImageView.SetImageResource(item.Image);
+            vh.ImageView.SetImageURI(Uri.Parse(item.Image));
             vh.NameView.Text = item.Name;
             vh.PriceView.Text = item.FormattedPrice;
         }

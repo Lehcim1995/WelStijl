@@ -1,14 +1,8 @@
-using System;
-using Android.OS;
-using Java.IO;
-using Java.Lang;
-using Object = System.Object;
-
 namespace WelStijl
 {
     class Clothing
     {
-        public int Image { get; set; }
+        public string Image { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
 
@@ -18,7 +12,7 @@ namespace WelStijl
 
         public string FormattedPrice => (Price/100m).ToString("C2");
 
-        public Clothing(int image, string name, int price, string color, string size, int gender)
+        public Clothing(string image, string name, int price, string color, string size, int gender)
         {
             Image = image;
             Name = name;
