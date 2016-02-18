@@ -8,10 +8,10 @@ namespace WelStijl
     {
         readonly List<Clothing> clothing = new List<Clothing>(new []
         {
-            new Clothing(Resource.Drawable.Icon, "Icon", 500, "green", "M", 0),
-            new Clothing(Resource.Drawable.Icon, "Other Icon", 495, "green", "L", 1),
-            new Clothing(Resource.Drawable.Icon, "Same Other Icon", 490, "green", "L", 0),
-            new Clothing(Resource.Drawable.Icon, "More Same Other Icon", 495, "green", "M", 1)
+            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Icon", 500, "green", "M", 0),
+            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Other Icon", 495, "green", "L", 1),
+            new Clothing(Resource.Drawable.ic_notification_sync_problem, "Same Other Icon", 490, "green", "L", 0),
+            new Clothing(Resource.Drawable.ic_notification_sync_problem, "More Same Other Icon", 495, "green", "M", 1)
         }); 
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
@@ -20,9 +20,11 @@ namespace WelStijl
 
             Clothing item = clothing[position];
 
+            vh.Clothing = item;
+
             vh.ImageView.SetImageResource(item.Image);
             vh.NameView.Text = item.Name;
-            vh.PriceView.Text = (item.Price / 100m).ToString("C2");
+            vh.PriceView.Text = item.FormattedPrice;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

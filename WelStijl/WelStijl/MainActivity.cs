@@ -16,7 +16,7 @@ using String = Java.Lang.String;
 
 namespace WelStijl
 {
-    [Activity(Label = "WelStijl", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "WelStijl", MainLauncher = true, Icon = "@drawable/ic_launcher")]
     public class MainActivity : AppCompatActivity
     {
         private Toolbar toolbar;
