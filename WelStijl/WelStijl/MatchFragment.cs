@@ -15,7 +15,7 @@ using Fragment = Android.Support.V4.App.Fragment;
 
 namespace WelStijl
 {
-    public class MatchFragment : Fragment
+    public class MatchFragment : Fragment, View.IOnClickListener
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -37,12 +37,35 @@ namespace WelStijl
                 {
                     rect = new RectangleShape(Application.Context, Color.Red);
                 }
-                
-                lloMatch.AddView(rect);
+
+                WindowManagerLayoutParams layoutParams = new WindowManagerLayoutParams();
+                layoutParams.Width = WindowManagerLayoutParams.MatchParent;
+                layoutParams.Height = 100;
+                lloMatch.AddView(rect, layoutParams);
+                rect.Id = i;
+                rect.SetOnClickListener(this);
                 i++;
             }
 
+
             return rootView;
+        }
+
+
+        public void OnClick(View v)
+        {
+            switch (v.Id)
+            {
+                case 0:
+                    Toast.MakeText(Activity, "Blauw", ToastLength.Short).Show();
+                    break;
+                case 1:
+                    Toast.MakeText(Activity, "Rood 1", ToastLength.Short).Show();
+                    break;
+                case 2:
+                    Toast.MakeText(Activity, "Rood 2", ToastLength.Short).Show();
+                    break;
+            }
         }
     }
 }
