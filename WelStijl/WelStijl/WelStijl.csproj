@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Clothing.cs" />
     <Compile Include="ClothingAdapter.cs" />
+    <Compile Include="ClothingColor.cs" />
     <Compile Include="ClothingViewHolder.cs" />
     <Compile Include="ClothingDetailActivity.cs" />
     <Compile Include="MatchFragment.cs" />
@@ -326,7 +327,7 @@
     <AndroidAsset Include="Assets\j-vest-grijs.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\m-2-broek-blauw-wit 2.jpg" />
+    <AndroidAsset Include="Assets\m-2-broek-blauw-wit-2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\m-2-broek-blauw-wit.jpg" />
@@ -347,7 +348,7 @@
     <AndroidAsset Include="Assets\m-broek-blauw.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\m-broek-grijs 2.jpg" />
+    <AndroidAsset Include="Assets\m-broek-grijs-2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\m-broek-grijs.jpg" />
@@ -371,7 +372,7 @@
     <AndroidAsset Include="Assets\m-shirt-bruin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\m-shirt-groen 2.jpg" />
+    <AndroidAsset Include="Assets\m-shirt-groen-2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\m-shirt-groen.jpg" />

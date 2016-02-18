@@ -1,8 +1,8 @@
 ﻿using System.IO;
 using Android.App;
 using Android.Graphics.Drawables;
-using Android.Net;
-using Android.OS;
+﻿using System;
+﻿using Android.OS;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Widget;
@@ -27,11 +27,14 @@ namespace WelStijl
 
             if (!Intent.Extras.IsEmpty)
             {
+                ClothingColor color;
+                Enum.TryParse(Intent.GetStringExtra("color"), out color);
+
                 _clothing = new Clothing(
                     Intent.GetStringExtra("image"),
-                    Intent.GetStringExtra("name"), 
-                    Intent.GetIntExtra("price", 0), 
-                    Intent.GetStringExtra("color"), 
+                    Intent.GetStringExtra("name"),
+                    Intent.GetIntExtra("price", 0),
+                    color,
                     Intent.GetStringExtra("size"), 
                     Intent.GetIntExtra("gender", 0)
                     );
@@ -45,6 +48,8 @@ namespace WelStijl
                     stream.Close();
 
                     FindViewById<ImageView>(Resource.Id.image).SetImageDrawable(d);
+
+                    d.Dispose();
                 }
                 catch (FileNotFoundException)
                 {
@@ -52,7 +57,7 @@ namespace WelStijl
                 }
 
                 FindViewById<TextView>(Resource.Id.price).Text = _clothing.FormattedPrice;
-                FindViewById<TextView>(Resource.Id.color).Text = _clothing.Color;
+                FindViewById<TextView>(Resource.Id.color).Text = _clothing.Color.ToString();
                 FindViewById<TextView>(Resource.Id.size).Text = _clothing.Size;
                 FindViewById<TextView>(Resource.Id.gender).Text = GetString(_clothing.Gender == 0 ? Resource.String.Male : Resource.String.Female);
             }
