@@ -7,5 +7,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/FragmentMatch" />
+        android:text="Kies kleur ( max 3)"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lloMatchColors"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp" />
 </LinearLayout>

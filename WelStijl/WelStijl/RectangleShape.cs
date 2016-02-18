@@ -21,16 +21,22 @@ namespace WelStijl
     class RectangleShape : View
     {
         private RectF bounds = new RectF(0, 0, 0, 0);
-        private Paint paint;
+        private Paint _paint;
+
+        public void setPaint(Color color)
+        {
+            _paint.Color = color;
+            PostInvalidate();
+        }
 
         public RectangleShape(Context context, Color color) : base(context)
         {
-            paint = new Paint {Color = color};
+            _paint = new Paint {Color = color};
         }
 
         protected override void OnDraw(Canvas canvas)
         {
-            canvas.DrawCircle(bounds.CenterX(), bounds.CenterY(), bounds.CenterX(), paint);
+            canvas.DrawCircle(bounds.CenterX(), bounds.CenterY(), bounds.CenterX(), _paint);
         }
 
         protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
