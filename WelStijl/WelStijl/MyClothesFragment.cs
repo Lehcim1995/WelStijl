@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
+using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Provider;
+using Android.Support.V4.App;
+using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using Java.IO;
@@ -59,12 +62,20 @@ namespace WelStijl
 
         private void TakeAPicture(object sender, EventArgs eventArgs)
         {
-            Intent intent = new Intent(MediaStore.ActionImageCapture);
-            App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
-            intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
-            //StartActivityForResult(intent, 0);
-            
-            Activity.StartActivityFromFragment(this, intent, 0);
+            if ((int)Build.VERSION.SdkInt >= 23)
+            {
+
+
+                   
+            }
+            else
+            {
+                Intent intent = new Intent(MediaStore.ActionImageCapture);
+                App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+                intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
+
+                Activity.StartActivityFromFragment(this, intent, 0);
+            }
         }
 
         public override void OnActivityResult(int requestCode, int resultCode, Intent data)
