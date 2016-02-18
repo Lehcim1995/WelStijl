@@ -29,7 +29,7 @@ namespace WelStijl
             intent.PutExtra("image", Clothing.Image);
             intent.PutExtra("name", Clothing.Name);
             intent.PutExtra("price", Clothing.Price);
-            intent.PutExtra("color", Clothing.Color);
+            intent.PutExtra("color", Clothing.Color.ToString());
             intent.PutExtra("size", Clothing.Size);
             intent.PutExtra("gender", Clothing.Gender);
             v.Context.StartActivity(intent);

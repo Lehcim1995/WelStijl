@@ -1,9 +1,10 @@
-﻿using Android.App;
-using Android.Net;
+﻿using System;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Widget;
+using Uri = Android.Net.Uri;
 
 namespace WelStijl
 {
@@ -24,11 +25,14 @@ namespace WelStijl
 
             if (!Intent.Extras.IsEmpty)
             {
+                ClothingColor color;
+                Enum.TryParse(Intent.GetStringExtra("color"), out color);
+
                 _clothing = new Clothing(
                     Intent.GetStringExtra("image"),
-                    Intent.GetStringExtra("name"), 
-                    Intent.GetIntExtra("price", 0), 
-                    Intent.GetStringExtra("color"), 
+                    Intent.GetStringExtra("name"),
+                    Intent.GetIntExtra("price", 0),
+                    color,
                     Intent.GetStringExtra("size"), 
                     Intent.GetIntExtra("gender", 0)
                     );
@@ -37,7 +41,7 @@ namespace WelStijl
 
                 FindViewById<ImageView>(Resource.Id.image).SetImageURI(Uri.Parse(_clothing.Image));
                 FindViewById<TextView>(Resource.Id.price).Text = _clothing.FormattedPrice;
-                FindViewById<TextView>(Resource.Id.color).Text = _clothing.Color;
+                FindViewById<TextView>(Resource.Id.color).Text = _clothing.Color.ToString();
                 FindViewById<TextView>(Resource.Id.size).Text = _clothing.Size;
                 FindViewById<TextView>(Resource.Id.gender).Text = GetString(_clothing.Gender == 0 ? Resource.String.Male : Resource.String.Female);
             }

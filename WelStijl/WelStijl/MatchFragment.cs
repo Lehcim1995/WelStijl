@@ -17,7 +17,7 @@ namespace WelStijl
 {
     public class MatchFragment : Fragment, View.IOnClickListener
     {
-        private String[] _colors = new[] {"Geel", "Geelgroen", "Groen", "Blauwgroen", "Blauw", "Blauwviolet", "violet", "Roodviolet", "Rood", "Oranjerood", "Oranje", "Geeloranje", "Wit", "Lichtgrijs", "Grijs", "Donkergrijs", "Zwart", "Bruin"};
+        private String[] _colors = new[] {"Geel", "Geelgroen", "Groen", "Blauwgroen", "Blauw", "Blauwviolet", "Violet", "Roodviolet", "Rood", "Oranjerood", "Oranje", "Geeloranje", "Wit", "Lichtgrijs", "Grijs", "Donkergrijs", "Zwart", "Bruin"};
         private View _rootView;
         private int _lastClickedColorId;
 

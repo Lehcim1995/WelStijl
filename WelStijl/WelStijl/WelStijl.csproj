@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Clothing.cs" />
     <Compile Include="ClothingAdapter.cs" />
+    <Compile Include="ClothingColor.cs" />
     <Compile Include="ClothingViewHolder.cs" />
     <Compile Include="ClothingDetailActivity.cs" />
     <Compile Include="MatchFragment.cs" />
