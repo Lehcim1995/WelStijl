@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Android.Graphics.Drawables;
@@ -63,13 +64,25 @@ namespace WelStijl
             new Clothing("m-trui-groen.jpg", "Trui groen", 3995, ClothingColor.Groen, "98/104, 110/116, 122/128, 134/140, 146/152, 158/164", 1),
             new Clothing("m-trui-zwart.jpg", "Trui zwart", 1695, ClothingColor.Zwart, "80, 86, 98/104, 104/110, 116/122, 128/134, 134/140, 146/152, 152/164, 164/170", 1),
             new Clothing("m-trui-grijs.jpg", "Trui grijs", 3295, ClothingColor.Grijs, "56, 62, 68, 74", 1),
-        }); 
+        });
+
+        private Predicate<Clothing> _matchPredicate = clothing => true;
+
+        public Predicate<Clothing> MatchPredicate
+        {
+            get { return _matchPredicate; }
+            set
+            {
+                _matchPredicate = value;
+                NotifyDataSetChanged();
+            }
+        }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             ClothingViewHolder vh = holder as ClothingViewHolder;
 
-            Clothing item = _clothing[position];
+            Clothing item = _clothing.FindAll(MatchPredicate)[position];
 
             if (vh != null)
             {
@@ -103,6 +116,6 @@ namespace WelStijl
             return vh;
         }
 
-        public override int ItemCount => _clothing.Count;
+        public override int ItemCount => _clothing.FindAll(MatchPredicate).Count;
     }
 }

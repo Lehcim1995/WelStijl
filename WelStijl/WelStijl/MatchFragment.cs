@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.V4.Graphics;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
@@ -20,6 +15,8 @@ namespace WelStijl
         private String[] _colors = new[] {"Geel", "Geelgroen", "Groen", "Blauwgroen", "Blauw", "Blauwviolet", "Violet", "Roodviolet", "Rood", "Oranjerood", "Oranje", "Geeloranje", "Wit", "Lichtgrijs", "Grijs", "Donkergrijs", "Zwart", "Bruin"};
         private View _rootView;
         private int _lastClickedColorId;
+        private RecyclerView recyclerView;
+        private ClothingAdapter adapter;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -53,6 +50,13 @@ namespace WelStijl
                 i++;
             }
 
+            recyclerView = _rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
+
+            adapter = new ClothingAdapter();
+
+            LinearLayoutManager layoutManager = new LinearLayoutManager(Activity, LinearLayoutManager.Vertical, false);
+            recyclerView.SetLayoutManager(layoutManager);
+            recyclerView.SetAdapter(adapter);
 
             return _rootView;
         }
