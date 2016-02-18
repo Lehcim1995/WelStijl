@@ -8,4 +8,8 @@
   <string name="openCamera">Open Camera</string>
   <string name="Male">Male</string>
   <string name="Female">Female</string>
+  <string name="ok">OK</string>
+  <string name="permissions_not_granted">Permissions were not granted.</string>
+  <string name="permission_camera_rationale">Camera permission is needed to show the camera preview.</string>
+  <string name="permision_available_camera">Camera Permission has been granted. Preview can now be opened.</string>
 </resources>

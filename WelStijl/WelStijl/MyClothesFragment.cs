@@ -7,8 +7,10 @@ using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using Android.Provider;
+using Android.Support.Design.Widget;
 using Android.Support.V4.App;
 using Android.Support.V4.Content;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.IO;
@@ -21,6 +23,7 @@ namespace WelStijl
     [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
     public class MyClothesFragment : Fragment
     {
+        static readonly int REQUEST_CAMERA = 0;
         private ImageView _imageView;
         private View rootView;
 
@@ -39,6 +42,28 @@ namespace WelStijl
             }
 
             return rootView;
+        }
+
+        void RequestCameraPermission()
+        {
+            //Log.Info(TAG, "CAMERA permission has NOT been granted. Requesting permission.");
+
+            if (ActivityCompat.ShouldShowRequestPermissionRationale(Activity, Manifest.Permission.Camera))
+            {
+                // Provide an additional rationale to the user if the permission was not granted
+                // and the user would benefit from additional context for the use of the permission.
+                // For example if the user has previously denied the permission.
+                //Log.Info(TAG, "Displaying camera permission rationale to provide additional context.");
+
+                Snackbar.Make(rootView, Resource.String.permission_camera_rationale,
+                    Snackbar.LengthIndefinite).SetAction(Resource.String.ok, new Action<View>(delegate (View obj) {
+                        ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.Camera }, REQUEST_CAMERA);
+                    })).Show();
+            }
+            else {
+                // Camera permission has not been granted yet. Request it directly.
+                ActivityCompat.RequestPermissions(Activity, new String[] { Manifest.Permission.Camera }, REQUEST_CAMERA);
+            }
         }
 
         private void CreateDirectoryForPictures()
@@ -65,6 +90,22 @@ namespace WelStijl
             if ((int)Build.VERSION.SdkInt >= 23)
             {
                 Toast.MakeText(Activity, "Je mobiel is kut", ToastLength.Short).Show();
+                if (ContextCompat.CheckSelfPermission(Context, Manifest.Permission.Camera) != (int)Permission.Granted)
+                {
+
+                    // Camera permission has not been granted
+                    RequestCameraPermission();
+                }
+                else {
+                    // Camera permissions is already available, show the camera preview.
+                    //Log.Info(TAG, "CAMERA permission has already been granted. Displaying camera preview.");
+                    Intent intent = new Intent(MediaStore.ActionImageCapture);
+                    App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+                    intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
+
+                    Activity.StartActivityFromFragment(this, intent, 0);
+                }
+
             }
             else
             {
@@ -78,9 +119,6 @@ namespace WelStijl
 
         public override void OnActivityResult(int requestCode, int resultCode, Intent data)
         {
-            Toast.MakeText(Activity, "Gelukt", ToastLength.Short).Show();
-            //OnActivityResult(requestCode, resultCode, data);
-
             // Make it available in the gallery
 
             Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
@@ -97,7 +135,6 @@ namespace WelStijl
             App.bitmap = LoadAndResizeBitmap(App._file.Path, width, height);
             if (App.bitmap != null)
             {
-                Toast.MakeText(Activity, "Plaatje?", ToastLength.Short).Show();
                 _imageView.SetImageBitmap(App.bitmap);
                 App.bitmap = null;
             }
