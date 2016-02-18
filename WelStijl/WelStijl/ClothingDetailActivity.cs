@@ -1,9 +1,12 @@
-﻿using Android.App;
+﻿using System.IO;
+using Android.App;
+using Android.Graphics.Drawables;
 using Android.Net;
 using Android.OS;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Widget;
+using FileNotFoundException = Java.IO.FileNotFoundException;
 
 namespace WelStijl
 {
@@ -35,7 +38,19 @@ namespace WelStijl
 
                 SupportActionBar.Title = _clothing.Name;
 
-                FindViewById<ImageView>(Resource.Id.image).SetImageURI(Uri.Parse(_clothing.Image));
+                try
+                {
+                    Stream stream = Assets.Open(_clothing.Image);
+                    Drawable d = Drawable.CreateFromStream(stream, null);
+                    stream.Close();
+
+                    FindViewById<ImageView>(Resource.Id.image).SetImageDrawable(d);
+                }
+                catch (FileNotFoundException)
+                {
+                    FindViewById<ImageView>(Resource.Id.image).SetImageResource(Resource.Drawable.ic_notification_sync_problem);
+                }
+
                 FindViewById<TextView>(Resource.Id.price).Text = _clothing.FormattedPrice;
                 FindViewById<TextView>(Resource.Id.color).Text = _clothing.Color;
                 FindViewById<TextView>(Resource.Id.size).Text = _clothing.Size;

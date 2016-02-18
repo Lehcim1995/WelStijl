@@ -293,12 +293,6 @@
     <AndroidAsset Include="Assets\j-schoen-grijs.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\j-shirt-blauw 2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\j-shirt-blauw 3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\j-shirt-blauw.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -323,7 +317,7 @@
     <AndroidAsset Include="Assets\j-trui-wit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\j-verst-blauw.jpg" />
+    <AndroidAsset Include="Assets\j-vest-blauw.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\j-vest-bruin.jpg" />
