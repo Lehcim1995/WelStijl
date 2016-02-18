@@ -64,9 +64,7 @@ namespace WelStijl
         {
             if ((int)Build.VERSION.SdkInt >= 23)
             {
-
-
-                   
+                Toast.MakeText(Activity, "Je mobiel is kut", ToastLength.Short).Show();
             }
             else
             {
