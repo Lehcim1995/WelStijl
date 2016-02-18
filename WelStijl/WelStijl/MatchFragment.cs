@@ -41,7 +41,7 @@ namespace WelStijl
                 }
 
                 WindowManagerLayoutParams layoutParams = new WindowManagerLayoutParams();
-                layoutParams.Width = WindowManagerLayoutParams.MatchParent;
+                layoutParams.Width = ViewGroup.LayoutParams.MatchParent;
                 layoutParams.Height = 200;
                 lloMatchColors.AddView(rect, layoutParams);
                 rect.Id = i;
@@ -77,18 +77,6 @@ namespace WelStijl
         {
             RectangleShape rectangle = _rootView.FindViewById<RectangleShape>(_lastClickedColorId);
             Color color;
-
-
-            switch (_lastClickedColorId) 
-            {
-                case 0:
-                    _rootView.FindViewById<RectangleShape>(1).Visibility = ViewStates.Visible;
-                    break;
-
-                case 1:
-                    _rootView.FindViewById<RectangleShape>(2).Visibility = ViewStates.Visible;
-                    break;
-            }
             
             switch(args.Which)
             {
@@ -147,7 +135,22 @@ namespace WelStijl
                     color = Color.Brown;
                     break;
             }
-            
+
+            switch (_lastClickedColorId)
+            {
+                case 0:
+                    ClothingColor clothingColor;
+                    Enum.TryParse(_colors[args.Which], out clothingColor);
+                    adapter.MatchPredicate = clothing => clothing.Color.Equals(clothingColor);
+
+                    //_rootView.FindViewById<RectangleShape>(1).Visibility = ViewStates.Visible;
+                    break;
+
+                case 1:
+                    _rootView.FindViewById<RectangleShape>(2).Visibility = ViewStates.Visible;
+                    break;
+            }
+
             rectangle.setPaint(color);
         }
     }
