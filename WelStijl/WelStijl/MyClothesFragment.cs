@@ -15,6 +15,7 @@ using Uri = Android.Net.Uri;
 
 namespace WelStijl
 {
+    [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
     public class MyClothesFragment : Fragment
     {
         private ImageView _imageView;
@@ -58,16 +59,18 @@ namespace WelStijl
 
         private void TakeAPicture(object sender, EventArgs eventArgs)
         {
-            Toast.MakeText(Activity, "Click", ToastLength.Short).Show();
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             App._file = new File(App._dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Uri.FromFile(App._file));
-            StartActivityForResult(intent, 0);
+            //StartActivityForResult(intent, 0);
+            
+            Activity.StartActivityFromFragment(this, intent, 0);
         }
 
-        protected void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        public override void OnActivityResult(int requestCode, int resultCode, Intent data)
         {
-            OnActivityResult(requestCode, (int)resultCode, data);
+            Toast.MakeText(Activity, "Gelukt", ToastLength.Short).Show();
+            //OnActivityResult(requestCode, resultCode, data);
 
             // Make it available in the gallery
 
@@ -85,6 +88,7 @@ namespace WelStijl
             App.bitmap = LoadAndResizeBitmap(App._file.Path, width, height);
             if (App.bitmap != null)
             {
+                Toast.MakeText(Activity, "Plaatje?", ToastLength.Short).Show();
                 _imageView.SetImageBitmap(App.bitmap);
                 App.bitmap = null;
             }
