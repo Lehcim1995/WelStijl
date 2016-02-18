@@ -35,7 +35,7 @@ namespace WelStijl
             if (!Intent.Extras.IsEmpty)
             {
                 _clothing = new Clothing(
-                    Intent.GetIntExtra("image", Resource.Drawable.Icon),
+                    Intent.GetIntExtra("image", Resource.Drawable.ic_notification_sync_problem),
                     Intent.GetStringExtra("name"), 
                     Intent.GetIntExtra("price", 0), 
                     Intent.GetStringExtra("color"), 
