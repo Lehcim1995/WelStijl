@@ -1855,8 +1855,8 @@ namespace WelStijl
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060079
-			public const int TakePicture = 2131099769;
+			// aapt resource value: 0x7f06007a
+			public const int TakePicture = 2131099770;
 			
 			// aapt resource value: 0x7f060082
 			public const int action0 = 2131099778;
@@ -2041,8 +2041,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f06007a
-			public const int imageView1 = 2131099770;
+			// aapt resource value: 0x7f06007b
+			public const int imageView1 = 2131099771;
 			
 			// aapt resource value: 0x7f06008d
 			public const int info = 2131099789;
@@ -2122,8 +2122,8 @@ namespace WelStijl
 			// aapt resource value: 0x7f060054
 			public const int radio = 2131099732;
 			
-			// aapt resource value: 0x7f06007b
-			public const int recyclerView = 2131099771;
+			// aapt resource value: 0x7f060079
+			public const int recyclerView = 2131099769;
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;

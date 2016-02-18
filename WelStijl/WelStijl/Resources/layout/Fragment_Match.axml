@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kies kleur ( max 3)"
+        android:text="Kies kleur"
         android:textStyle="bold"
         android:paddingTop="10dp"
         android:paddingLeft="10dp" />
@@ -20,4 +20,9 @@
         android:id="@+id/lloMatchColors"
         android:paddingLeft="10dp"
         android:paddingEnd="10dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.V4.Graphics;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Fragment = Android.Support.V4.App.Fragment;
@@ -20,6 +15,8 @@ namespace WelStijl
         private String[] _colors = new[] {"Geel", "Geelgroen", "Groen", "Blauwgroen", "Blauw", "Blauwviolet", "Violet", "Roodviolet", "Rood", "Oranjerood", "Oranje", "Geeloranje", "Wit", "Lichtgrijs", "Grijs", "Donkergrijs", "Zwart", "Bruin"};
         private View _rootView;
         private int _lastClickedColorId;
+        private RecyclerView recyclerView;
+        private ClothingAdapter adapter;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -44,7 +41,7 @@ namespace WelStijl
                 }
 
                 WindowManagerLayoutParams layoutParams = new WindowManagerLayoutParams();
-                layoutParams.Width = WindowManagerLayoutParams.MatchParent;
+                layoutParams.Width = ViewGroup.LayoutParams.MatchParent;
                 layoutParams.Height = 200;
                 lloMatchColors.AddView(rect, layoutParams);
                 rect.Id = i;
@@ -53,6 +50,13 @@ namespace WelStijl
                 i++;
             }
 
+            recyclerView = _rootView.FindViewById<RecyclerView>(Resource.Id.recyclerView);
+
+            adapter = new ClothingAdapter();
+
+            LinearLayoutManager layoutManager = new LinearLayoutManager(Activity, LinearLayoutManager.Vertical, false);
+            recyclerView.SetLayoutManager(layoutManager);
+            recyclerView.SetAdapter(adapter);
 
             return _rootView;
         }
@@ -73,18 +77,6 @@ namespace WelStijl
         {
             RectangleShape rectangle = _rootView.FindViewById<RectangleShape>(_lastClickedColorId);
             Color color;
-
-
-            switch (_lastClickedColorId) 
-            {
-                case 0:
-                    _rootView.FindViewById<RectangleShape>(1).Visibility = ViewStates.Visible;
-                    break;
-
-                case 1:
-                    _rootView.FindViewById<RectangleShape>(2).Visibility = ViewStates.Visible;
-                    break;
-            }
             
             switch(args.Which)
             {
@@ -143,7 +135,22 @@ namespace WelStijl
                     color = Color.Brown;
                     break;
             }
-            
+
+            switch (_lastClickedColorId)
+            {
+                case 0:
+                    ClothingColor clothingColor;
+                    Enum.TryParse(_colors[args.Which], out clothingColor);
+                    adapter.MatchPredicate = clothing => clothing.Color.Equals(clothingColor);
+
+                    //_rootView.FindViewById<RectangleShape>(1).Visibility = ViewStates.Visible;
+                    break;
+
+                case 1:
+                    _rootView.FindViewById<RectangleShape>(2).Visibility = ViewStates.Visible;
+                    break;
+            }
+
             rectangle.setPaint(color);
         }
     }
